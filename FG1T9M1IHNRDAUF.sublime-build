@@ -1,0 +1,12 @@
+{
+	"cmd": ["xc8","--chip=18f4550","$file" ],
+	 "variants": [
+        { "name": "Run",
+          "cmd": ["pk2cmd","-PPIC18f4550","-M","-F$file_path/$file_base_name.hex"]
+        },
+        { "name":"Play",
+        	"cmd":["pk2cmd" , "-PPIC18f4550 -A4" ,"-T"]
+        }
+    ]
+
+}
